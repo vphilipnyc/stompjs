@@ -516,6 +516,8 @@ export class Client {
     if (this.webSocketFactory) {
       webSocket = this.webSocketFactory();
     } else {
+      this.debug('creating new webscocket with broker URL ' + this.brokerURL);
+      this.debug('using protocol versions ' + this.stompVersions.protocolVersions());
       webSocket = new WebSocket(
         this.brokerURL,
         this.stompVersions.protocolVersions()
