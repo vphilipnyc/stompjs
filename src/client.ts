@@ -435,7 +435,7 @@ export class Client {
       }, this.connectionTimeout);
     }
 
-    this.debug('Opening Web Socket...');
+    this.debug('Opening Web Socket.');
 
     // Get the actual WebSocket (or a similar object)
     const webSocket = this._createWebSocket();
